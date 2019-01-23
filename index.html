@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>my Products</h1>
+    <div class="content">
+        <form id="add-products-form">
+            <input type="text" name="name" placeholder="products name">
+            <input type="text" name="price" placeholder="projects price">
+            <input type="text" name="stocks" placeholder="products stocks">
+            <button>Add products</button>
+        </form>
+        <ul id="products-list"></ul>
+
+    </div>
+    
+  
+    
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDXJpv360TTnZvPGCyIZEFwB9Rq8DTG5Xg",
+    authDomain: "my-products-94e81.firebaseapp.com",
+    databaseURL: "https://my-products-94e81.firebaseio.com",
+    projectId: "my-products-94e81",
+    storageBucket: "my-products-94e81.appspot.com",
+    messagingSenderId: "221412697469"
+  };
+  firebase.initializeApp(config);
+  const db =firebase.firestore();
+  db.settings({ timestampsInSnapshots: true })
+</script>
+<script src="app.js"></script>
+</body>
+</html>
